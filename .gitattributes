@@ -1,0 +1,28 @@
+#
+# Based on https://github.com/alexkaratarakis/gitattributes
+#
+
+## AUTO-DETECT
+##   Handle line endings automatically for files detected as
+##   text and leave all files detected as binary untouched.
+##   This will handle all files NOT defined below.
+*   text=auto
+
+# These files are text and should be normalized (Convert crlf => lf)
+*.gitattributes text
+.gitignore      text
+
+## DOCUMENTATION
+*.md            text
+*.txt           text
+AUTHORS         text
+CHANGELOG       text
+CHANGES         text
+CONTRIBUTING    text
+COPYING         text
+*COPYRIGHT*     text
+INSTALL         text
+LICENSE         text
+NEWS            text
+*README*        text
+TODO            text

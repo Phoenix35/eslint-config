@@ -19,3 +19,11 @@ jspm_packages/
 # dotenv environment variables file
 .env
 .env.test
+
+.idea/
+
+# Folder config file
+[Dd]esktop.ini
+
+*.rar
+*.zip

@@ -1,0 +1,40 @@
+{
+  "name": "@phoenix35/eslint-config",
+  "version": "0.1.0",
+  "description": "Complete ESLint shareable config for beginners",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phoenix35/eslint-config.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "es2020"
+  ],
+  "bugs": {
+    "url": "https://github.com/Phoenix35/eslint-config/issues"
+  },
+  "peerDependencies": {
+    "eslint": ">= 7.3.0",
+    "eslint-plugin-jsdoc": "^27.1.2",
+    "eslint-plugin-node": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.0",
+    "eslint-plugin-jsdoc": "^27.1.2",
+    "eslint-plugin-node": "^11.1.0"
+  },
+  "engines": {
+    "node": ">= 12.18.1"
+  },
+  "author": "Phoenix35",
+  "license": "MPL-2.0"
+}
