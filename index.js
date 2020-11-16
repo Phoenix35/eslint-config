@@ -10,7 +10,7 @@ module.exports = {
     "es2020": true
   },
   "parserOptions": {
-    "ecmaVersion": 2020
+    "ecmaVersion": 2021
   },
   "plugins": [
     "jsdoc"
@@ -23,7 +23,7 @@ module.exports = {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  "rules": {
+  "rules":{
     // Changes to eslint:recommended
     "no-inner-declarations": "off",
     "no-empty": [
@@ -230,7 +230,10 @@ module.exports = {
     ],
     "no-shadow": [
       "error",
-      { "builtinGlobals": true }
+      {
+        "builtinGlobals": true,
+        "allow": ["name"] // because of `window.name`
+      }
     ],
     "no-undef-init": "error",
     "no-use-before-define": [
