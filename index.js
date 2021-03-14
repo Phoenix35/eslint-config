@@ -23,7 +23,7 @@ module.exports = {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  "rules":{
+  "rules": {
     // Changes to eslint:recommended
     "no-inner-declarations": "off",
     "no-empty": [
