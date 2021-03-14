@@ -366,6 +366,7 @@ module.exports = {
       "BinaryExpression[operator=\"in\"]",
       "CallExpression[callee.name=\"setTimeout\"][arguments.length<2]",
       { "selector": "CallExpression[callee.property.name=\"forEach\"]", "message": "No `.forEach` <https://phoenix35.js.org/good-practices.html#no-more-foreach>." },
+      { "selector": "CallExpression[callee.property.name=\"then\"]", "message": "Use `async`/`await`." },
       { "selector": "CallExpression[callee.property.name=\"substr\"]", "message": "Use `.slice`." },
       { "selector": "CallExpression[callee.property.name=\"getYear\"]", "message": "Use `.getFullYear`." },
       { "selector": "CallExpression[callee.property.name=\"setYear\"]", "message": "Use `.setFullYear`." },
