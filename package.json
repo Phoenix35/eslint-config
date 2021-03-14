@@ -1,6 +1,6 @@
 {
   "name": "@phoenix35/eslint-config",
-  "version": "0.2.0",
+  "version": "0.3.2",
   "description": "Complete ESLint shareable config for beginners",
   "main": "index.js",
   "scripts": {

@@ -161,7 +161,7 @@ Install these 3 packages in your project
 ```
 $ npm i -D eslint
 $ npm i -D eslint-plugin-jsdoc
-$ npm i -D @phoenix35/eslint-config
+$ npm i -D https://github.com/Phoenix35/eslint-config
 ```
 If you are working on a node.js project, add this devDependency as well
 ```
@@ -172,7 +172,7 @@ $ npm i -D eslint-plugin-node
 
 Alternatively
 ```
-install-peerdeps -D @phoenix35/eslint-config
+install-peerdeps -D https://github.com/Phoenix35/eslint-config
 ```
 (this will install the optional peer dependency `eslint-plugin-node` as well)
 
