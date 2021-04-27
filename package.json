@@ -1,6 +1,6 @@
 {
   "name": "@phoenix35/eslint-config",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Complete ESLint shareable config for beginners",
   "main": "index.js",
   "scripts": {
@@ -16,23 +16,23 @@
   "keywords": [
     "eslint",
     "eslintconfig",
-    "es2020"
+    "es2021"
   ],
   "bugs": {
     "url": "https://github.com/Phoenix35/eslint-config/issues"
   },
   "peerDependencies": {
-    "eslint": ">= 7.22.0",
-    "eslint-plugin-jsdoc": "^32.2.0",
+    "eslint": ">= 7.25.0",
+    "eslint-plugin-jsdoc": "^32.3.2",
     "eslint-plugin-node": "^11.1.0"
   },
   "devDependencies": {
-    "eslint": "^7.22.0",
-    "eslint-plugin-jsdoc": "^32.2.0",
+    "eslint": "^7.25.0",
+    "eslint-plugin-jsdoc": "^32.3.2",
     "eslint-plugin-node": "^11.1.0"
   },
   "engines": {
-    "node": ">= 12.19.0"
+    "node": ">= 14.16.1"
   },
   "author": "Phoenix35",
   "license": "MPL-2.0"

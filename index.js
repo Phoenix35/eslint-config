@@ -156,7 +156,10 @@ module.exports = {
 
     "no-implicit-coercion": [
       "error",
-      { "allow": [ "!!" ] }
+      {
+        "disallowTemplateShorthand": true,
+        "allow": [ "!!" ]
+      }
     ],
     "no-implicit-globals": "error",
     "no-invalid-this": "error",
