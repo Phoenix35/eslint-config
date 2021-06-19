@@ -7,10 +7,7 @@
 module.exports = {
   "root": true,
   "env": {
-    "es2020": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 2021
+    "es2021": true
   },
   "plugins": [
     "jsdoc"
@@ -231,6 +228,7 @@ module.exports = {
       "never",
       { "exceptRange": true }
     ],
+    "strict": [ "error" ],
     "no-shadow": [
       "error",
       {

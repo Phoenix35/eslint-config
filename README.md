@@ -119,7 +119,8 @@ You will not touch this file again. You will just copy paste it in your various 
 ### Browser
 ```js
   "env": {
-    "browser": true
+    "browser": true,
+    "sourceType": "module"
   },
 ```
 
