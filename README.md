@@ -52,7 +52,7 @@ if (condition) doStuff(); // beside
 
 ## First setup
 
-1. Create a `.eslintrc.js` file.
+1. Create a `.eslintrc.cjs` file.
     ```js
     module.exports = {
       "env": {
@@ -156,7 +156,7 @@ Works for Greasemonkey, Violentmonkey, Tampermonkey
 
 # Install
 
-You should have a `.eslintrc.js` file ready now.  
+You should have a `.eslintrc.cjs` file ready now.  
 Install these 3 packages in your project
 ```
 $ npm i -D eslint
@@ -172,7 +172,7 @@ $ npm i -D eslint-plugin-node
 
 Alternatively
 ```
-install-peerdeps -D https://github.com/Phoenix35/eslint-config
+npx install-peerdeps -D https://github.com/Phoenix35/eslint-config
 ```
 (this will install the optional peer dependency `eslint-plugin-node` as well)
 
