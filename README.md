@@ -96,27 +96,43 @@ You will not touch this file again. You will just copy paste it in your various 
 ## My project is
 
 ### Node.js
-**You need `eslint-plugin-node` installed as well**
-```js
-  "extends": [
-    "@phoenix35/eslint-config/node"
-  ],
-```
+1. Make an [`"engines"` field](<https://docs.npmjs.com/cli/v7/configuring-npm/package-json#engines>) in the `package.json` of this project
+    ```json
+      "engines": {
+        "node": ">= 16.3.0"
+      }
+    ```
+   The version should be `>=` LTS or a later node.js version you use
+1. Extend `/node` in the `.eslintrc.cjs` of this project
+    ```js
+      "extends": [
+        "@phoenix35/eslint-config/node"
+      ],
+    ```
 
 
 ### Fullstack
-**You need `eslint-plugin-node` installed as well**
+1. Follow both steps of [Node.js](<#nodejs>) above
+1. Additionally, make your `"env"` fullstack
+    ```js
+      "env": {
+        "node": true,
+        "browser": true
+      },
+      "extends": [
+        "@phoenix35/eslint-config/node"
+      ],
+    ```
+
+
+### Browser
+Make your `"env"` browser
 ```js
   "env": {
     "browser": true
   },
-  "extends": [
-    "@phoenix35/eslint-config/node"
-  ],
 ```
-
-
-### Browser
+Besides, if you are ready to use [ES modules](<https://exploringjs.com/impatient-js/ch_modules.html>), let ESLint know
 ```js
   "env": {
     "browser": true,
@@ -126,7 +142,7 @@ You will not touch this file again. You will just copy paste it in your various 
 
 
 ### Userscript
-Works for Greasemonkey, Violentmonkey, Tampermonkey
+Works for Greasemonkey and Violentmonkey
 ```js
   "env": {
     "browser": true,
@@ -139,9 +155,10 @@ Works for Greasemonkey, Violentmonkey, Tampermonkey
 ```js
   "env": {
     "webextensions": true
-    /* You may need to add
+    /* 
+      Depending on your needs,
+      you may need to add
     "browser": true
-       depending on your needs
     */
   },
 ```
@@ -164,7 +181,7 @@ $ npm i -D eslint
 $ npm i -D eslint-plugin-jsdoc
 $ npm i -D https://github.com/Phoenix35/eslint-config
 ```
-If you are working on a node.js project, add this devDependency as well
+If you extend from `/node`, add this devDependency as well
 ```
 $ npm i -D eslint-plugin-node
 ```
