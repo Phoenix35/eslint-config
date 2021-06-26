@@ -135,7 +135,9 @@ Make your `"env"` browser
 Besides, if you are ready to use [ES modules](<https://exploringjs.com/impatient-js/ch_modules.html>), let ESLint know
 ```js
   "env": {
-    "browser": true,
+    "browser": true
+  },
+  "parserOptions": {
     "sourceType": "module"
   },
 ```
