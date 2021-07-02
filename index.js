@@ -327,7 +327,8 @@ module.exports = {
       "error",
       {
         "afterBlockComment": false,
-        "afterLineComment": false
+        "afterLineComment": false,
+        "allowBlockStart": true
       }
     ],
 
