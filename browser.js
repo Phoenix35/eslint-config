@@ -5,7 +5,8 @@ export default [
   base,
   {
     languageOptions: {
-      globals: globals["shared-node-browser"]
+      globals: globals.browser,
+      sourceType: "module"
     }
   }
 ];

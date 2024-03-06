@@ -8,7 +8,6 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # Dependency directories
 node_modules/
-jspm_packages/
 
 # Optional npm cache directory
 .npm
@@ -16,14 +15,14 @@ jspm_packages/
 # Optional eslint cache
 .eslintcache
 
-# dotenv environment variables file
+# dotenv environment variable files
 .env
-.env.test
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
 
 .idea/
 
 # Folder config file
 [Dd]esktop.ini
-
-*.rar
-*.zip
