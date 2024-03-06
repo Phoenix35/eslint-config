@@ -1,8 +1,15 @@
 {
   "name": "@phoenix35/eslint-config",
-  "version": "0.5.0",
+  "version": "1.0.0-beta.0",
   "description": "Complete ESLint shareable config for beginners",
-  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./browser": "./browser.js",
+    "./node": "./node.js",
+    "./webextensions": "./webextensions.js",
+    "./userscript": "./userscript.js"
+  },
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,24 +22,40 @@
   },
   "keywords": [
     "eslint",
-    "eslintconfig",
-    "es2021"
+    "eslintconfig"
   ],
   "bugs": {
     "url": "https://github.com/Phoenix35/eslint-config/issues"
   },
-  "peerDependencies": {
-    "eslint": ">= 7.29.0",
-    "eslint-plugin-jsdoc": ">=35.4.1",
-    "eslint-plugin-node": ">=11.1.0"
+  "dependencies": {
+    "@stylistic/eslint-plugin-js": "^1.6.3",
+    "@stylistic/eslint-plugin-plus": "^1.6.3",
+    "eslint": ">= 9.0.0-beta.1",
+    "eslint-plugin-jsdoc": "^48.2.0",
+    "globals": "^14.0.0"
   },
-  "devDependencies": {
-    "eslint": "^7.29.0",
-    "eslint-plugin-jsdoc": "^35.4.1",
-    "eslint-plugin-node": "^11.1.0"
+  "optionalDependencies": {
+    "eslint-plugin-n": "^17.0.0-4"
+  },
+  "peerDependencies": {
+    "eslint": ">= 9.0.0-beta.1"
+  },
+  "overrides": {
+    "eslint-plugin-jsdoc": {
+      "eslint": "$eslint"
+    },
+    "eslint-plugin-n": {
+      "eslint": "$eslint"
+    },
+    "@stylistic/eslint-plugin-js": {
+      "eslint": "$eslint"
+    },
+    "@stylistic/eslint-plugin-plus": {
+      "eslint": "$eslint"
+    }
   },
   "engines": {
-    "node": ">= 14.17.1"
+    "node": ">= 20.11.1"
   },
   "author": "Phoenix35",
   "license": "MPL-2.0"

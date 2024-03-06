@@ -1,38 +1,24 @@
 # @phoenix35/eslint-config
 
+:warning: Beta version
+
 Complete ESLint shareable config for beginners.
 
 
-# Preliminary thoughts
+## Preliminary thoughts
 
 What do you prefer?
 ```js
-/* indent */
-{
-  2; // 2 spaces
-}
-// or
-{
-    4; // 4 spaces
-}
-```
-```js
-/* quotes */
-"Hello, world!"; // double quotes
-// or
-'Hello, world!'; // single quotes
-```
-```js
 /* curly */
-while (true) { // multi-or-nest, consistent
-  if(condition)
+while (true) { // mandatory curly braces for multi-line
+  if (condition) // optional curly braces for single-line
     doSomething();
   else
     doSomethingElse();
 }
 // or
-while (true) { // all
-  if(condition) {
+while (true) { // mandatory curly braces for all blocks
+  if (condition) {
     doSomething();
   } else {
     doSomethingElse();
@@ -40,162 +26,155 @@ while (true) { // all
 }
 ```
 ```js
-/* nonblock-statement-body-position */
-if (condition)
-  doStuff(); // below
+/* @stylistic/js/quotes */
+"Hello, world!"; // double quotes
 // or
-if (condition) doStuff(); // beside
+'Hello, world!'; // single quotes
 ```
-
-
-# How to use
-
-## First setup
-
-1. Create a `.eslintrc.cjs` file.
-    ```js
-    module.exports = {
-      "env": {
-      },
-      "extends": [
-        "@phoenix35/eslint-config"
-      ],
-      "rules" : {
-        // If you prefer 4 indentation spaces, add this rule
-        "indent": [
-            "error",
-            4,
-            {
-                "SwitchCase": 1,
-                "VariableDeclarator": "first",
-                "outerIIFEBody": 0
-            }
-        ],
-        // If you prefer single quotes, add this rule
-        "quotes": [
-          "error",
-          "single",
-          { "avoidEscape": true }
-        ],
-        // If you prefer curlies for all, add this rule
-        "curly": "error",
-        // If you prefer non block statements to be beside, add this rule
-        "nonblock-statement-body-position": "error"
-      }
-    };
-    ```
-1. **Save this file in the root folder of your web dev**.
-For example if you follow [MDN's tutorial](<https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files>), they advised a `web-projects` folder.
-You will not touch this file again. You will just copy paste it in your various projects.
-
-1. **Copy this file** in your current project, e.g. `test-site`.
-
-1. Modify the _per-project_ file according to your project.
-
-
-## My project is
-
-### Node.js
-1. Make an [`"engines"` field](<https://docs.npmjs.com/cli/v7/configuring-npm/package-json#engines>) in the `package.json` of this project
-    ```json
-      "engines": {
-        "node": ">= 16.3.0"
-      }
-    ```
-   The version should be `>=` LTS or a later node.js version you use
-1. Extend `/node` in the `.eslintrc.cjs` of this project
-    ```js
-      "extends": [
-        "@phoenix35/eslint-config/node"
-      ],
-    ```
-
-
-### Fullstack
-1. Follow both steps of [Node.js](<#nodejs>) above
-1. Additionally, make your `"env"` fullstack
-    ```js
-      "env": {
-        "node": true,
-        "browser": true
-      },
-      "extends": [
-        "@phoenix35/eslint-config/node"
-      ],
-    ```
-
-
-### Browser
-Make your `"env"` browser
 ```js
-  "env": {
-    "browser": true
-  },
+/* @stylistic/js/nonblock-statement-body-position */
+if (condition)
+  doStuff(); // statement below the control
+// or
+if (condition) doStuff(); // statement beside the control
 ```
-Besides, if you are ready to use [ES modules](<https://exploringjs.com/impatient-js/ch_modules.html>), let ESLint know
+
+
+## How to use
+
+Make sure your node version is up-to-date.  
+LTS version is `20.11.1` right now, this config will not work with anything below.
+
+Make an [`"engines"` field](<https://docs.npmjs.com/cli/v10/configuring-npm/package-json#engines>) in the `package.json` of your project
+```json
+  "engines": {
+    "node": ">= 20.11.1"
+  }
+```
+The version should be `>=` LTS or a later node.js version you use.
+
+Create a **`eslint.config.js`** file in the same directory as your `package.json`.  
+
 ```js
-  "env": {
-    "browser": true
-  },
-  "parserOptions": {
-    "sourceType": "module"
-  },
+// eslint.config.js
+// import line
+
+export default [
+  ...importedDefault,
+  {
+    rules: {
+      // curly braces for all blocks
+      /* "curly": [ "error", "all" ], /**/
+      // single quotes
+      /* "@stylistic/js/quotes": [ "error", "single", { avoidEscape: true } ], /**/
+      // statement beside the control
+      /* "@stylistic/js/nonblock-statement-body-position": [ "error", "beside" ], /**/
+    }
+  }
+];
 ```
 
+Uncomment the line for each rule you want to follow, by removing the `/*` at the beginning of said line.  
+The exact content needs to be adapted to the type of project
 
-### Userscript
+
+### - Browser project
+You need to install the regular package
+```shell
+npm install -D @phoenix35/eslint-config@next
+```
+```js
+// eslint.config.js
+import browserDefault from "@phoenix35/eslint-config/browser";
+
+export default [
+  ...browserDefault,
+  {
+    rules: {
+      // your rules
+    }
+  }
+];
+```
+
+### - Node.js project
+You need to install the full package with optional dependencies
+```shell
+npm install -D --include=optional @phoenix35/eslint-config@next
+```
+```js
+// eslint.config.js
+import nodeDefault from "@phoenix35/eslint-config/node";
+
+export default [
+  ...nodeDefault,
+  {
+    rules: {
+      // your rules
+    }
+  }
+];
+```
+
+### - Fullstack project
+You need to install the package with optional dependencies (see [Node.js project](<#--nodejs-project>))
+
+Have a `eslint.config.js` file following "browser project" in the parent directory containing browser-specific code and another following "node project" next to your top-level `package.json`.
+
+### - Userscript
 Works for Greasemonkey and Violentmonkey
+```shell
+npm install -D @phoenix35/eslint-config@next
+```
 ```js
-  "env": {
-    "browser": true,
-    "greasemonkey": true
-  },
+// eslint.config.js
+import monkeyDefault from "@phoenix35/eslint-config/userscript";
+
+export default [
+  ...monkeyDefault,
+  {
+    rules: {
+      // your rules
+    }
+  }
+];
 ```
 
-
-### WebExtension
+### - WebExtension project
+```shell
+npm install -D @phoenix35/eslint-config@next
+```
 ```js
-  "env": {
-    "webextensions": true
-    /* 
-      Depending on your needs,
-      you may need to add
-    "browser": true
-    */
-  },
+// eslint.config.js
+import extensionDefault from "@phoenix35/eslint-config/webextensions";
+
+export default [
+  ...extensionDefault,
+  {
+    rules: {
+      // your rules
+    }
+  }
+];
 ```
 
-
-### Polymorphic library
+### - A Polymorphic library
+```shell
+npm install -D @phoenix35/eslint-config@next
+```
 ```js
-  "env": {
-    "shared-node-browser": true
-  },
-```
+// eslint.config.js
+import baseDefault from "@phoenix35/eslint-config";
 
-
-# Install
-
-You should have a `.eslintrc.cjs` file ready now.  
-Install these 3 packages in your project
+export default [
+  ...baseDefault,
+  {
+    rules: {
+      // your rules
+    }
+  }
+];
 ```
-$ npm i -D eslint
-$ npm i -D eslint-plugin-jsdoc
-$ npm i -D https://github.com/Phoenix35/eslint-config
-```
-If you extend from `/node`, add this devDependency as well
-```
-$ npm i -D eslint-plugin-node
-```
-
----
-
-Alternatively
-```
-npx install-peerdeps -D https://github.com/Phoenix35/eslint-config
-```
-(this will install the optional peer dependency `eslint-plugin-node` as well)
-
 
 # Now what
 Start coding. You're done here.
