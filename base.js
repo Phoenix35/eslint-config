@@ -12,7 +12,7 @@ export default {
     "@stylistic/plus": stylisticPlus,
   },
   rules: {
-    ...jsdoc.configs["flat/recommended"],
+    ...jsdoc.configs["flat/recommended"].rules,
     "jsdoc/check-indentation": "error",
     "jsdoc/check-line-alignment": [ "error", "always" ],
     "jsdoc/informative-docs": "error",
@@ -253,6 +253,7 @@ export default {
     // Layout & Formatting
     // "line-comment-position": "off",
     "unicode-bom": "error",
+
     "@stylistic/js/array-bracket-newline": [ "error", "consistent" ],
     "@stylistic/js/array-bracket-spacing": [ "error", "always" ],
     "@stylistic/js/array-element-newline": [ "error", "consistent" ],
