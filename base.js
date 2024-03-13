@@ -53,7 +53,7 @@ export default {
     "no-import-assign": "error",
     "no-inner-declarations": "error", // for `var`
     "no-invalid-regexp": "error",
-    "no-irregular-whitespaces": [ "error", { skipStrings: false } ],
+    "no-irregular-whitespace": [ "error", { skipStrings: false } ],
     "no-loss-of-precision": "error",
     "no-misleading-character-class": "error",
     "no-new-native-nonconstructor": "error",
