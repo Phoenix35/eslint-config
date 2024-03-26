@@ -48,7 +48,7 @@ export default {
     "no-empty-character-class": "error",
     "no-empty-pattern": "error",
     "no-ex-assign": "error",
-    "no-fallthrough": "error",
+    "no-fallthrough": [ "error", { reportUnusedFallthroughComment: true }],
     "no-func-assign": "error",
     "no-import-assign": "error",
     "no-inner-declarations": "error", // for `var`

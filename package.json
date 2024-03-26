@@ -28,23 +28,20 @@
     "url": "https://github.com/Phoenix35/eslint-config/issues"
   },
   "dependencies": {
-    "@stylistic/eslint-plugin-js": "^1.6.3",
-    "@stylistic/eslint-plugin-plus": "^1.6.3",
-    "eslint": ">= 9.0.0-beta.2",
+    "@stylistic/eslint-plugin-js": "^1.7.0",
+    "@stylistic/eslint-plugin-plus": "^1.7.0",
+    "eslint": ">= 9.0.0-rc.0",
     "eslint-plugin-jsdoc": "^48.2.1",
-    "globals": "^14.0.0"
+    "globals": "^15.0.0"
   },
   "optionalDependencies": {
-    "eslint-plugin-n": "^17.0.0-4"
+    "eslint-plugin-n": "^17.0.0-6"
   },
   "peerDependencies": {
-    "eslint": ">= 9.0.0-beta.2"
+    "eslint": ">= 9.0.0-rc.0"
   },
   "overrides": {
     "eslint-plugin-jsdoc": {
-      "eslint": "$eslint"
-    },
-    "eslint-plugin-n": {
       "eslint": "$eslint"
     },
     "@stylistic/eslint-plugin-js": {
