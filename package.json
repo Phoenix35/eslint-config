@@ -30,29 +30,18 @@
   "dependencies": {
     "@stylistic/eslint-plugin-js": "^1.7.0",
     "@stylistic/eslint-plugin-plus": "^1.7.0",
-    "eslint": ">= 9.0.0-rc.0",
-    "eslint-plugin-jsdoc": "^48.2.1",
+    "eslint": ">= 9.0.0",
+    "eslint-plugin-jsdoc": "^48.2.3",
     "globals": "^15.0.0"
   },
   "optionalDependencies": {
-    "eslint-plugin-n": "^17.0.0-6"
+    "eslint-plugin-n": "^17.0.0"
   },
   "peerDependencies": {
-    "eslint": ">= 9.0.0-rc.0"
-  },
-  "overrides": {
-    "eslint-plugin-jsdoc": {
-      "eslint": "$eslint"
-    },
-    "@stylistic/eslint-plugin-js": {
-      "eslint": "$eslint"
-    },
-    "@stylistic/eslint-plugin-plus": {
-      "eslint": "$eslint"
-    }
+    "eslint": ">= 9.0.0"
   },
   "engines": {
-    "node": ">= 20.11.1"
+    "node": ">= 20.12.1"
   },
   "author": "Phoenix35",
   "license": "MPL-2.0"
