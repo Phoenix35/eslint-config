@@ -81,7 +81,7 @@ The exact content needs to be adapted to the type of project
 ### - Browser project
 You need to install the regular package
 ```shell
-npm install -D eslint@next @phoenix35/eslint-config@next
+npm install -D eslint @phoenix35/eslint-config
 ```
 ```js
 // eslint.config.mjs
@@ -100,8 +100,8 @@ export default [
 ### - Node.js project
 You need to install the full package with optional dependencies
 ```shell
-npm install -D eslint@next
-npm install -D --include=optional @phoenix35/eslint-config@next
+npm install -D eslint
+npm install -D --include=optional @phoenix35/eslint-config
 ```
 ```js
 // eslint.config.mjs
@@ -125,7 +125,7 @@ Have a `eslint.config.mjs` file following "browser project" in the parent direct
 ### - Userscript
 Works for Greasemonkey and Violentmonkey
 ```shell
-npm install -D eslint@next @phoenix35/eslint-config@next
+npm install -D eslint @phoenix35/eslint-config
 ```
 ```js
 // eslint.config.mjs
@@ -143,7 +143,7 @@ export default [
 
 ### - WebExtension project
 ```shell
-npm install -D eslint@next @phoenix35/eslint-config@next
+npm install -D eslint @phoenix35/eslint-config
 ```
 ```js
 // eslint.config.mjs
@@ -161,7 +161,7 @@ export default [
 
 ### - A Polymorphic library
 ```shell
-npm install -D eslint@next @phoenix35/eslint-config@next
+npm install -D eslint @phoenix35/eslint-config
 ```
 ```js
 // eslint.config.mjs
