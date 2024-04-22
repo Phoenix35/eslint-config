@@ -5,6 +5,7 @@ export default [
   base,
   ...nodePlugin.configs["flat/mixed-esm-and-cjs"],
   {
+    name: "@phoenix35/node",
     rules: {
       "n/exports-style": ["error", "module.exports"],
       "n/handle-callback-err": "error",

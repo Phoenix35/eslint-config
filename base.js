@@ -35,7 +35,7 @@ export default {
     "no-cond-assign": "error",
     "no-const-assign": "error",
     "no-constant-binary-expression": "error",
-    "no-constant-condition": "error",
+    "no-constant-condition": [ "error", { checkLoops: "all" } ],
     "no-constructor-return": "warn",
     "no-control-regex": "warn",
     "no-debugger": "error",
