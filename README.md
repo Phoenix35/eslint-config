@@ -1,7 +1,5 @@
 # @phoenix35/eslint-config
 
-:warning: Beta version
-
 Complete ESLint shareable config for beginners.
 
 
