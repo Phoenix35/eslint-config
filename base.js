@@ -116,7 +116,6 @@ export default {
     "max-nested-callbacks": "error",
     "max-params": "off",
     "max-statements": "off",
-    "multiline-comment-style": "off",
     "new-cap": "error",
     "no-alert": "warn",
     "no-array-constructor": "error",
@@ -135,7 +134,7 @@ export default {
     "no-eval": "error",
     "no-extend-native": "error",
     "no-extra-bind": "warn",
-    "no-extra-boolean-cast": [ "error", { enforceForLogicalOperands: true} ],
+    "no-extra-boolean-cast": [ "error", { enforceForInnerExpressions: true} ],
     "no-extra-label": "error",
     "no-global-assign": "error",
     "no-implicit-coercion": [ "error", { disallowTemplateShorthand: true, allow: [ "!!" ] } ],
@@ -251,7 +250,6 @@ export default {
     "yoda": [ "error", "never", { exceptRange: true } ],
 
     // Layout & Formatting
-    // "line-comment-position": "off",
     "unicode-bom": "error",
 
     "@stylistic/js/array-bracket-newline": [ "error", "consistent" ],
@@ -286,11 +284,13 @@ export default {
     // "@stylistic/js/jsx-quotes": "off",
     "@stylistic/js/key-spacing": "error",
     "@stylistic/js/keyword-spacing": "error",
+    "@stylistic/js/line-comment-position": "off",
     "@stylistic/js/linebreak-style": "off",
     "@stylistic/js/lines-around-comment": "off",
     "@stylistic/js/lines-between-class-members": "off",
     "@stylistic/js/max-len": "off",
     "@stylistic/js/max-statements-per-line": "error",
+    "@stylistic/js/multiline-comment-style": "off",
     "@stylistic/js/multiline-ternary": [ "error", "always-multiline" ],
     "@stylistic/js/new-parens": "error",
     "@stylistic/js/newline-per-chained-call": "error",
