@@ -353,7 +353,14 @@ export default {
     "@stylistic/js/space-in-parens": "error",
     "@stylistic/js/space-infix-ops": "error",
     "@stylistic/js/space-unary-ops": "error",
-    "@stylistic/js/spaced-comment": [ "error", "never", { block: { balanced: true } } ],
+    "@stylistic/js/spaced-comment": [
+      "error",
+      "always",
+      {
+        line: { markers: [ "/" ] },
+        block: { exceptions: ["*"], balanced: true },
+      }
+    ],
     "@stylistic/js/switch-colon-spacing": "error",
     "@stylistic/js/template-curly-spacing": "error",
     "@stylistic/js/template-tag-spacing": "error",
