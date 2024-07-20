@@ -15,6 +15,7 @@ export default {
     ...jsdoc.configs["flat/recommended"].rules,
     "jsdoc/check-indentation": "error",
     "jsdoc/check-line-alignment": [ "error", "always" ],
+    "jsdoc/check-template-names": "error",
     "jsdoc/informative-docs": "error",
     "jsdoc/no-blank-blocks": "warn",
     "jsdoc/require-asterisk-prefix": "error",
