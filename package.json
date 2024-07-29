@@ -28,19 +28,19 @@
     "url": "https://github.com/Phoenix35/eslint-config/issues"
   },
   "dependencies": {
-    "@stylistic/eslint-plugin-js": "^2.6.0-beta.0",
-    "@stylistic/eslint-plugin-plus": "^2.6.0-beta.0",
-    "eslint-plugin-jsdoc": "^48.8.1",
+    "@stylistic/eslint-plugin-js": "^2.6.0-beta.1",
+    "@stylistic/eslint-plugin-plus": "^2.6.0-beta.1",
+    "eslint-plugin-jsdoc": "^48.9.2",
     "globals": "^15.8.0"
   },
   "optionalDependencies": {
-    "eslint-plugin-n": "^17.9.0"
+    "eslint-plugin-n": "^17.10.1"
   },
   "peerDependencies": {
-    "eslint": ">= 9.7.0"
+    "eslint": ">= 9.8.0"
   },
   "engines": {
-    "node": ">= 20.15.1"
+    "node": ">= 20.16.0"
   },
   "author": "Phoenix35",
   "license": "MPL-2.0"
