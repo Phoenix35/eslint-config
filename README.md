@@ -41,12 +41,12 @@ if (condition) doStuff(); // statement beside the control
 ## How to use
 
 Make sure your node version is up-to-date.  
-LTS version is `20.12.1` right now, this config will not work with anything below.
+LTS version is `20.16.0` right now, this config will not work with anything below.
 
 Make an [`"engines"` field](<https://docs.npmjs.com/cli/v10/configuring-npm/package-json#engines>) in the `package.json` of your project
 ```json
   "engines": {
-    "node": ">= 20.12.1"
+    "node": ">= 20.16.0"
   }
 ```
 The version should be `>=` LTS or a later node.js version you use.
