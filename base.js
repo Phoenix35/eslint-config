@@ -17,6 +17,7 @@ export default {
     "jsdoc/check-line-alignment": [ "error", "always" ],
     "jsdoc/check-template-names": "error",
     "jsdoc/informative-docs": "error",
+    "jsdoc/lines-before-block": "error",
     "jsdoc/no-blank-blocks": "warn",
     "jsdoc/require-asterisk-prefix": "error",
     "jsdoc/require-description": "warn",
